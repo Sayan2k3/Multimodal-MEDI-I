@@ -1,0 +1,266 @@
+:root {
+    --primary: #0077b6;
+    --accent: #d32f2f;
+    --bg: #f0f5ff;
+    --glass: rgba(255, 255, 255, 0.8);
+    --shadow: 0 15px 35px rgba(0,0,0,0.05);
+}
+
+body {
+    background: var(--bg);
+    margin: 0;
+    color: #333;
+}
+
+.engine-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Stats Bar */
+.stats-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid #eef2f7;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+/* Engine Grid */
+.engine-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+}
+
+section {
+    background: white;
+    padding: 35px;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+}
+
+section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.section-hint {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 25px;
+}
+
+/* Goals List */
+.goals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.goal-item {
+    background: #f9fbff;
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #e1e8f0;
+    transition: 0.3s;
+}
+
+.goal-item:hover {
+    transform: translateX(10px);
+    border-color: var(--primary);
+}
+
+.goal-info h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.goal-info p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.goal-check {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.goal-check.done {
+    background: var(--primary);
+    color: white;
+}
+
+/* Rewards Card */
+.reward-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reward-card {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.reward-card.locked {
+    opacity: 0.6;
+    filter: grayscale(0.5);
+    background: #f5f5f5;
+}
+
+.reward-icon {
+    font-size: 30px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Coach Widget */
+.coach-widget {
+    margin-top: 30px;
+    background: linear-gradient(135deg, #0077b6 0%, #005f92 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.coach-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.coach-header img {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.coach-header span {
+    font-weight: 700;
+}
+
+/* Insurance Insight */
+.insurance-insights {
+    margin-top: 30px;
+    background: #fff0f0;
+    border: 1px solid #ffcccc;
+}
+
+.insight-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.insight-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Popup Styles */
+#congrats-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s;
+}
+
+.popup-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup-content {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.popup-icon {
+    font-size: 80px;
+    margin-top: 20px;
+}
+
+.close-popup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+}
+
+.goal-item.exercise {
+    border-left: 5px solid #28a745;
+}

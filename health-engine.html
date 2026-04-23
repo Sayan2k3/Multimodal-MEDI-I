@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDI-I | Health Engine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="health-engine.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="MEDI-I.png" alt="MEDI-I Logo">
+            <div class="logo-text">
+                <h1>MEDI-I</h1>
+                <p>AI FOR MEDICARE</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Back to Dashboard</a></li>
+                <li class="profile-nav">
+                    <span id="user-points">🪙 0 Coins</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="engine-container">
+        <!-- Streak & Level Section -->
+        <div class="stats-bar">
+            <div class="stat-card">
+                <span class="stat-label">Daily Streak</span>
+                <div class="stat-value"><span id="streak-count">0</span> 🔥</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Health Level</span>
+                <div class="stat-value" id="health-level">Lvl 1</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Next Reward</span>
+                <div class="stat-value" id="next-reward-progress">20%</div>
+            </div>
+        </div>
+
+        <div class="engine-grid">
+            <!-- Smart Goals Column -->
+            <section class="goals-section">
+                <div class="goal-group">
+                    <h3>Daily Goals ☀️</h3>
+                    <div id="daily-goals" class="goals-list"></div>
+                </div>
+
+                <div class="goal-group" style="margin-top:40px">
+                    <h3>Weekly Milestones 📈</h3>
+                    <div id="weekly-goals" class="goals-list"></div>
+                </div>
+
+                <div class="goal-group" style="margin-top:40px">
+                    <h3>Monthly Challenges 🏆</h3>
+                    <div id="monthly-goals" class="goals-list"></div>
+                </div>
+
+                <div class="goal-group" style="margin-top:40px">
+                    <h3>Yearly Life-Goals ✨</h3>
+                    <div id="yearly-goals" class="goals-list"></div>
+                </div>
+            </section>
+
+            <!-- Rewards & Benefits Column -->
+            <section class="rewards-section">
+                <h3>Earned Rewards 🪙</h3>
+                <div class="reward-cards" id="reward-list">
+                    <!-- Rewards -->
+                </div>
+
+                <div class="coach-widget">
+                    <div class="coach-header">
+                        <img src="MEDI-I.png" alt="Coach">
+                        <span>Coach Medi</span>
+                    </div>
+                    <p id="coach-message">"You're doing great! Complete your water goal to maintain your streak."</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Popup Congratulation -->
+        <div id="congrats-popup" class="popup-hidden">
+            <div class="popup-content">
+                <span class="close-popup">&times;</span>
+                <h2>🎉 Amazing Work!</h2>
+                <p id="popup-text">You earned 50 Medi-Coins!</p>
+                <div class="popup-icon">🪙</div>
+            </div>
+        </div>
+        
+    </main>
+
+    <script src="ai-service.js"></script>
+    <script src="health-engine.js"></script>
+</body>
+</html>

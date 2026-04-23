@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+/* Premium Design System */
+:root {
+    --primary: #0077b6;
+    --primary-light: #00b4d8;
+    --accent: #d32f2f;
+    --bg: #f8fbff;
+    --white: #ffffff;
+    --text: #1a1a1a;
+    --text-muted: #666;
+}
+
+body {
+    font-family: 'Outfit', sans-serif !important;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Header Fixes */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { height: 45px; }
+.logo-text h1 { color: var(--primary); font-size: 24px; font-weight: 800; margin: 0; }
+.logo-text p { font-size: 10px; color: #888; letter-spacing: 2px; margin: 0; }
+
+nav ul { display: flex; list-style: none; gap: 30px; margin: 0; padding: 0; }
+nav ul li a { text-decoration: none; color: #333; font-weight: 600; transition: 0.3s; }
+nav ul li a:hover { color: var(--primary); }
+
+/* Hero Premium Fixes */
+.hero-premium {
+    padding: 120px 20px;
+    background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.hero-content { max-width: 900px; }
+
+.badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hero-premium h1 {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-premium p {
+    font-size: 20px;
+    opacity: 0.9;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-actions { display: flex; gap: 20px; justify-content: center; }
+
+.btn-primary {
+    background: white;
+    color: var(--primary);
+    padding: 16px 40px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid white;
+    padding: 14px 40px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* Section Premium Fixes */
+.section-premium { padding: 80px 5%; text-align: center; }
+.light-bg { background: white; }
+.section-header h2 { font-size: 36px; font-weight: 800; color: var(--primary); margin-bottom: 40px; }
+
+.premium-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.premium-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
+    transition: 0.3s;
+}
+
+.premium-card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0, 119, 182, 0.15); }
+
+.icon-box { font-size: 40px; margin-bottom: 20px; display: block; }
+
+.premium-card h3 { font-size: 22px; font-weight: 800; color: #1a1a1a; margin-bottom: 15px; }
+.premium-card p { color: #666; font-size: 15px; }
+
+.faq-card {
+    background: #ffffff; /* Pure white card */
+    padding: 35px;
+    border-radius: 20px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 119, 182, 0.08); /* Soft blue shadow */
+    border: 1px solid #eef2f6;
+    transition: 0.3s;
+}
+
+.faq-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.faq-card h3 { 
+    font-size: 18px; 
+    font-weight: 800; 
+    color: #003366 !important; /* Dark navy for visibility */
+    margin-bottom: 12px; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.faq-card p { 
+    color: #444444 !important; /* Solid dark gray for visibility */
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0; 
+}
+
+.light-bg {
+    background-color: #f0f7ff !important; /* Very light blue section background */
+}
+
+/* FAQ Fixes */
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+/* Login Section */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #f0f8ff; /* Same as body background */
+}
+
+.login-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border: 3px solid #d32f2f; /* Red border for form */
+}
+
+.login-container h2 {
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+/* Account Options */
+.account-options input[type="radio"] {
+    margin: 10px;
+}
+
+.account-options label {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Login Inputs */
+.login-inputs {
+    margin-top: 20px;
+}
+
+.login-inputs input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Login Button */
+.login-btn {
+    padding: 10px 30px;
+    background-color: #d32f2f;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background-color: #b71c1c;
+}
+
+
+/* Reusing global styles */
+
+/* Dashboard Section */
+.dashboard-section {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #f0f8ff; /* Same as other sections */
+    color: #333;
+}
+
+.dashboard-section h2 {
+    font-size: 36px;
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+.dashboard-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* Option Cards */
+.option-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.option-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+}
+
+.option-card h3 {
+    font-size: 24px;
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+
+.option-card p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Option Buttons */
+.option-btn {
+    padding: 10px 20px;
+    background-color: #d32f2f;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.option-btn:hover {
+    background-color: #b71c1c;
+}
+
+
+/* Basic Details Section Styles */
+.details-section {
+    padding: 50px 20px;
+    background-color: #f0f8ff; /* Maintain the same background color */
+    text-align: center;
+}
+
+.details-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Center the form with a max width */
+    margin: auto; /* Center the container */
+}
+
+.details-container h2 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left; /* Align labels to the left */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #0077b6; /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #005f8b; /* Darker shade for hover effect */
+}
+
+/* Footer */
+footer {
+    background-color: #0077b6; /* Same as other pages */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tagline */
+.tagline {
+    flex: 1;
+    text-align: center; /* Center the tagline */
+    font-size: 16px; /* Adjust font size */
+    color: #555;
+    font-style: italic; /* Italicize for better appearance */
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text h1 {
+    font-size: 24px;
+    color: #0077b6;
+}
+
+.logo-text p {
+    font-size: 12px;
+    color: #333;
+    margin-top: 4px;
+}
+
+/* Details Section Styles */
+.details-section {
+    padding: 40px 20px;
+}
+
+.details-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #d32f2f; /* Red border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.details-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input Group Styles */
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input Field Styles */
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #0077b6;
+}
+
+/* Align radio buttons (for Smoker section) */
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between Yes and No radio buttons */
+}
+
+/* Align checkboxes (for Disease section) */
+/* Disease Section */
+.disease-group {
+    display: flex;
+    flex-direction: column; /* Stack disease items vertically */
+    gap: 10px; /* Space between items */
+    margin-top: 10px;
+}
+
+.disease-item {
+    display: flex;
+    align-items: center; /* Align checkbox and label vertically */
+    gap: 10px; /* Space between checkbox and label */
+}
+
+.disease-item input[type="text"] {
+    margin-left: 15px; /* Add space between text input and checkbox */
+    padding: 5px;
+    width: 200px; /* Set width for 'other' text input */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.disease-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* Submit Button Styles */
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #005f8c;
+}
+
+/* Footer */
+footer {
+    background: var(--primary);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative; /* Changed from fixed */
+    width: 100%;
+}
+
+.contact-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: var(--primary);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Profile
+/* Profile Logo Styles */
+.profile-logo {
+    width: 40px;  /* Small profile image size */
+    height: 40px; /* You can adjust the width and height to match your needs */
+    border-radius: 50%; /* Make the logo circular */
+    border: 2px solid #0077b6; /* Optional: Add a border around the logo */
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+    margin-left: 10px; /* Adds spacing between logo and other elements */
+}
+
+/* For better alignment with other nav items */
+ul {
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    margin-left: 20px; /* Adjusts spacing between list items */
+}

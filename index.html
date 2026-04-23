@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDI-I | AI for Medicare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="MEDI-I.png" alt="MEDI-I Logo">
+            <div class="logo-text">
+                <h1>MEDI-I</h1>
+                <p>AI FOR MEDICARE</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about-us">About</a></li>
+                <li><a href="#use-cases">Use Cases</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <!-- <button class="plan-finder-btn">Plan Finder</button> -->
+        </nav>
+    </header>
+
+    <section class="hero-premium">
+        <div class="hero-content">
+            <span class="badge">Next-Gen Health Intelligence</span>
+            <h1>Your Private AI Copilot for <span class="gradient-text">Medical Planning</span></h1>
+            <p>Simplifying the complexities of medical insurance through advanced AI analytics and personalized guidance.</p>
+            <div class="hero-actions">
+                <a href="login.html" class="btn-primary">Launch MEDI-I</a>
+                <a href="#about-us" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-us" class="section-premium">
+        <div class="container">
+            <div class="section-header">
+                <h2>Redefining Healthcare Navigation</h2>
+                <div class="divider"></div>
+            </div>
+            <p class="lead-text">At MEDI-I, we revolutionize healthcare with AI-powered solutions that make it easier for patients and providers to navigate the complexities of medical insurance. By harnessing the power of large language models, we provide real-time insights and tailored health plan suggestions.</p>
+        </div>
+    </section>
+
+    <section id="use-cases" class="section-premium light-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Intelligent Use Cases</h2>
+                <p>Advanced features designed to simplify your health journey</p>
+            </div>
+            <div class="premium-grid">
+                <div class="premium-card">
+                    <div class="icon-box">📊</div>
+                    <h3>Plan Comparison</h3>
+                    <p>Compare multiple health insurance plans side-by-side with deep AI insights on value and coverage.</p>
+                </div>
+                <div class="premium-card">
+                    <div class="icon-box">🧠</div>
+                    <h3>Coverage Recommendations</h3>
+                    <p>Get personalized coverage suggestions tailored to your unique health DNA and financial goals.</p>
+                </div>
+                <div class="premium-card">
+                    <div class="icon-box">🗺️</div>
+                    <h3>Healthcare Navigation</h3>
+                    <p>Find the best doctors and hospitals within your network instantly using our intelligent mapping.</p>
+                </div>
+                <div class="premium-card">
+                    <div class="icon-box">⚡</div>
+                    <h3>Instant Support</h3>
+                    <p>Resolve queries about claims, premiums, and benefits instantly with our 24/7 AI-driven support system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faqs" class="section-premium light-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Answers to your most common questions about the MEDI-I ecosystem.</p>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h3>🔍 What is MEDI-I?</h3>
+                    <p>An AI-powered health companion that optimizes your medical insurance and tracks your daily fitness DNA.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>🎯 How accurate are the plans?</h3>
+                    <p>Our algorithms provide up to 99% accurate matching based on your unique age, health, and family profile.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>🛡️ Is my data private?</h3>
+                    <p>Yes, we use secure encryption to ensure your health details are only used for your personal recommendations.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>💰 What are Medi-Coins?</h3>
+                    <p>Rewards you earn for completing daily health goals, which can be used to unlock premium features.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>👨‍👩‍👧 Does it support family?</h3>
+                    <p>Yes, our analysis accounts for children and dependents to find the best multi-person coverage.</p>
+                </div>
+                <div class="faq-card">
+                    <h3>📈 How do I level up?</h3>
+                    <p>Stay consistent with your health goals to earn points and progress from Level 0 to a Fitness Pro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p><strong>MEDI-I</strong></p>
+            <p>Location: Kolkata, India</p>
+            <p>Contact: +91 99070xxxxx</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 MEDI-I. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth Scrolling for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

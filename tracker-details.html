@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDI-I | Your Fitness DNA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0077b6;
+            --accent: #d32f2f;
+            --bg: #f8fbff;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+            margin: 0;
+            color: #1a1a1a;
+            min-height: 100vh;
+        }
+
+        .tracker-form-section {
+            padding: 60px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-card {
+            background: white;
+            max-width: 900px;
+            width: 100%;
+            padding: 60px;
+            border-radius: 40px;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0, 119, 182, 0.05);
+            margin: 20px;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .form-header h2 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(to right, #0077b6, #00b4d8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        .form-header p {
+            color: #666;
+            font-size: 19px;
+        }
+
+        .step-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .step-title span {
+            background: var(--primary);
+            color: white;
+            flex-shrink: 0;
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(0, 119, 182, 0.2);
+        }
+
+        .input-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .option-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .option-card {
+            flex: 1 1 calc(33.333% - 15px);
+            min-width: 200px;
+            background: #fff;
+            border: 2px solid #f0f0f0;
+            padding: 25px 15px;
+            border-radius: 24px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100px;
+        }
+
+        .option-card:hover {
+            border-color: var(--primary);
+            background: #f0f9ff;
+            transform: translateY(-5px);
+        }
+
+        .option-card.selected {
+            background: #0077b6;
+            color: white;
+            border-color: #0077b6;
+            box-shadow: 0 15px 30px rgba(0, 119, 182, 0.15);
+        }
+
+        .option-card small {
+            display: block;
+            margin-top: 8px;
+            opacity: 0.7;
+            font-weight: 400;
+            font-size: 13px;
+        }
+
+        .option-card.selected small {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Modern Range Slider */
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 10px;
+            background: #eee;
+            border-radius: 5px;
+            outline: none;
+            margin: 20px 0;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 24px;
+            height: 24px;
+            background: var(--primary);
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(0, 119, 182, 0.3);
+            transition: 0.2s;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+
+        .sleep-value {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary);
+            text-align: center;
+        }
+
+        @media (max-width: 800px) {
+            .option-group {
+                grid-template-columns: 1fr;
+            }
+            .form-card {
+                padding: 40px 25px;
+            }
+        }
+
+        .submit-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .btn-large {
+            background: var(--primary);
+            color: white;
+            padding: 20px 60px;
+            border-radius: 20px;
+            border: none;
+            font-size: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 15px 30px rgba(0, 119, 182, 0.2);
+        }
+
+        .btn-large:hover {
+            transform: scale(1.05);
+            background: #005f92;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="MEDI-I.png" alt="MEDI-I Logo">
+            <div class="logo-text">
+                <h1>MEDI-I</h1>
+                <p>HEALTH DNA</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Back to Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="tracker-form-section">
+        <div class="form-card">
+            <div class="form-header">
+                <h2>Your Fitness DNA</h2>
+                <p>Help us design your path to immortality.</p>
+            </div>
+
+            <form id="trackerForm">
+                <div class="input-grid">
+                    <div class="form-group">
+                        <div class="step-title"><span>1</span> Your Activity Level</div>
+                        <div class="option-group">
+                            <div class="option-card" data-val="sedentary">Sedentary<br><small>Office job, low movement</small></div>
+                            <div class="option-card" data-val="moderate">Moderate<br><small>Light exercise 3x/week</small></div>
+                            <div class="option-card" data-val="active">Highly Active<br><small>Daily intense training</small></div>
+                        </div>
+                        <input type="hidden" id="activityLevel" required>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="step-title"><span>2</span> Primary Fitness Goal</div>
+                        <div class="option-group">
+                            <div class="option-card" data-val="weightLoss">Weight Loss</div>
+                            <div class="option-card" data-val="muscleGain">Muscle Build</div>
+                            <div class="option-card" data-val="longevity">Longevity & Health</div>
+                        </div>
+                        <input type="hidden" id="fitnessGoal" required>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="step-title"><span>3</span> Daily Sleep Target</div>
+                        <label id="sleepLabel">8 Hours</label>
+                        <input type="range" id="sleepInput" min="4" max="12" step="0.5" value="8">
+                    </div>
+
+                    <div class="form-group">
+                        <div class="step-title"><span>4</span> Current Stress Level</div>
+                        <div class="option-group">
+                            <div class="option-card" data-val="low">Chill</div>
+                            <div class="option-card" data-val="med">Normal</div>
+                            <div class="option-card" data-val="high">Busy / Stressed</div>
+                        </div>
+                        <input type="hidden" id="stressLevel" required>
+                    </div>
+                </div>
+
+                <div class="submit-container">
+                    <button type="submit" class="btn-large">Launch Tracker</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Option selection logic
+        document.querySelectorAll('.option-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const group = this.parentElement;
+                group.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+                this.classList.add('selected');
+                group.nextElementSibling.value = this.dataset.val;
+            });
+        });
+
+        // Sleep slider logic
+        document.getElementById('sleepInput').addEventListener('input', function() {
+            document.getElementById('sleepLabel').innerText = this.value + " Hours";
+        });
+
+        // Form submission
+        document.getElementById('trackerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const data = {
+                activity: document.getElementById('activityLevel').value,
+                goal: document.getElementById('fitnessGoal').value,
+                sleep: document.getElementById('sleepInput').value,
+                stress: document.getElementById('stressLevel').value,
+                timestamp: new Date().toISOString()
+            };
+            
+            if(!data.activity || !data.goal || !data.stress) {
+                alert("Please select all options to proceed!");
+                return;
+            }
+
+            localStorage.setItem('trackerFormData', JSON.stringify(data));
+            localStorage.setItem('trackerOnboarded', 'true');
+            
+            // Initialize level 0 state
+            const initialState = {
+                points: 0,
+                streak: 0,
+                level: 0,
+                goalsCompleted: 0,
+                lastDate: new Date().toLocaleDateString()
+            };
+            localStorage.setItem('healthEngineState', JSON.stringify(initialState));
+            
+            window.location.href = "health-engine.html";
+        });
+    </script>
+</body>
+</html>
