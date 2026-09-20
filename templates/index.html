@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDI-I | AI for Medicare</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/static/images/MEDI-I.png" alt="MEDI-I Logo">
+            <div class="logo-text">
+                <h1>MEDI-I</h1>
+                <p>AI FOR MEDICARE</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about-us">About</a></li>
+                <li><a href="#use-cases">Use Cases</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <!-- <button class="plan-finder-btn">Plan Finder</button> -->
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>AI for Medicare Answers</h2>
+        <p>Your Private AI Copilot to plan your medical plans.</p>
+        <a href="/login" class="explore-btn">Explore Use Cases</a>
+    </section>
+
+    <section id="about-us" class="section about-section">
+        <div class="container">
+            <h2>About MEDI-I</h2>
+            <p>At MEDI-I, we revolutionize healthcare with AI-powered solutions that make it easier for patients and providers to navigate the complexities of medical insurance. By harnessing the power of large language models and advanced data analytics, we simplify insurance plans, offer real-time insights, and provide tailored health plan suggestions.</p>
+        </div>
+    </section>
+
+    <section id="use-cases" class="section use-cases-section">
+        <div class="container">
+            <h2>Use Cases</h2>
+            <div class="use-case-cards">
+                <div class="card">
+                    <h3>Plan Comparison</h3>
+                    <p>MEDI-I helps users compare multiple health insurance plans side-by-side, offering insights on premiums, coverage, and added benefits to find the best fit.</p>
+                </div>
+                <div class="card">
+                    <h3>Coverage Recommendations</h3>
+                    <p>Our AI-driven tool analyzes user preferences and health data to suggest personalized coverage plans tailored to individual needs.</p>
+                </div>
+                <div class="card">
+                    <h3>Healthcare Navigation</h3>
+                    <p>We guide users in navigating the healthcare system, making it easy to find doctors, hospitals, and pharmacies that match their plan's network.</p>
+                </div>
+                <div class="card">
+                    <h3>Instant Support</h3>
+                    <p>With real-time customer support, users can resolve queries related to claims, premiums, and benefits instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faqs" class="section faqs-section">
+        <div class="container">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            <div class="faq-item">
+                <h3>What is MEDI-I?</h3>
+                <p>MEDI-I is an AI-powered platform that simplifies the process of selecting and managing medical insurance policies tailored to individual needs.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How does MEDI-I recommend insurance plans?</h3>
+                <p>We use advanced AI algorithms to analyze user preferences, health conditions, and available plans to recommend the best insurance options.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Can MEDI-I help with claim processing?</h3>
+                <p>Yes, MEDI-I offers support for processing claims and can provide insights on how to optimize your coverage for smoother claims handling.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Is MEDI-I secure?</h3>
+                <p>Absolutely. We follow strict privacy and security protocols to ensure your data is protected.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p><strong>MEDI-I</strong></p>
+            <p>Location: Kolkata, India</p>
+            <p>Contact: +91 99070xxxxx</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 MEDI-I. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth Scrolling for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

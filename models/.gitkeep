@@ -1,0 +1,3 @@
+# Keeps models directory in git.
+# When cloning fresh, run: python start.py
+# It will auto-generate the dataset and train XGBoost models.

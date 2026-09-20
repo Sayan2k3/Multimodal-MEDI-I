@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDI-I | Dashboard</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="/static/images/MEDI-I.png" alt="MEDI-I Logo">
+            <div class="logo-text">
+                <h1>MEDI-I</h1>
+                <p>AI FOR MEDICARE</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="use-cases.html">Use Cases</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="profile"><a href="#"><img src="/static/images/Profile logo.png" alt="Profile Logo" class="profile-logo"></a></li>
+            </ul>
+            <!-- <button class="plan-finder-btn">Plan Finder</button> -->
+        </nav>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard-section">
+        <h2>Welcome to Your Medicare Dashboard</h2>
+        <p>Select an option to proceed</p>
+
+        <div class="option-cards">
+            <!-- Option 1: Talk to Health Expert -->
+            <div class="option-card">
+                <h3>Talk to our Health Care Bot</h3>
+                <p>Get professional advice on your healthcare and insurance plans.</p>
+                <a href="https://medi-ibot.streamlit.app/" class="option-btn" target="_blank">Start Chat</a>
+                
+
+            </div>
+
+            <!-- Option 2: Get Recommendation -->
+            <div class="option-card">
+                <h3>Get Recommendation</h3>
+                <p>Let AI suggest the best medical plans tailored to your needs.</p>
+                <!--<a href="#" class="option-btn">Get Started</a>-->
+                <a href="/basic-details" class="option-btn">Get Started</a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 MEDI-I. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

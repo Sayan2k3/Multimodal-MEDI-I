@@ -1,0 +1,67 @@
+# ==========================================================
+# MEDI-I: XGBoost Machine Learning Configuration
+# All model parameters, training iterations, and settings
+# ==========================================================
+
+model:
+  name: "xgboost_medicare_recommender"
+  version: "2.0.0"
+  description: "End-to-End Multi-Model XGBoost Medicare Recommender"
+  
+  # XGBoost Classifier: Multi-Class Plan Suitability
+  classifier:
+    objective: "multi:softprob"
+    eval_metric: "mlogloss"
+    n_estimators: 180         # Number of boosting iterations / trees
+    max_depth: 5              # Maximum tree depth
+    learning_rate: 0.04       # Step size shrinkage (eta)
+    subsample: 0.85           # Subsample ratio
+    colsample_bytree: 0.85    # Column subsample ratio
+    min_child_weight: 2       # Minimum child weight
+    gamma: 0.1                # Minimum loss reduction
+    random_state: 42
+
+  # XGBoost Regressor: Personalized Risk-Adjusted Premium
+  premium_regressor:
+    objective: "reg:squarederror"
+    eval_metric: "rmse"
+    n_estimators: 140         # Number of boosting iterations
+    max_depth: 4              # Maximum tree depth
+    learning_rate: 0.04       # Learning rate
+    subsample: 0.85
+    colsample_bytree: 0.85
+    random_state: 42
+
+  # XGBoost Regressor: Dynamic Sum Insured / Coverage Amount (in Lakhs INR)
+  coverage_regressor:
+    objective: "reg:squarederror"
+    eval_metric: "rmse"
+    n_estimators: 100         # Number of boosting iterations
+    max_depth: 4              # Maximum tree depth
+    learning_rate: 0.05       # Learning rate
+    subsample: 0.85
+    colsample_bytree: 0.85
+    random_state: 42
+
+# Dataset Configuration
+dataset:
+  sample_size: 4000           # Synthetic patient/user training samples
+  test_size: 0.2              # Train/Test split ratio
+  random_state: 42
+  data_dir: "data"
+  data_filename: "medicare_dataset.csv"
+
+# Saved Artifacts Paths
+artifacts:
+  models_dir: "models"
+  classifier_file: "xgb_classifier.json"
+  regressor_file: "xgb_regressor.json"
+  coverage_file: "xgb_coverage.json"
+  preprocessor_file: "preprocessor.pkl"
+  metadata_file: "metadata.json"
+
+# Server Configuration
+server:
+  host: "127.0.0.1"
+  port: 5000
+  debug: false

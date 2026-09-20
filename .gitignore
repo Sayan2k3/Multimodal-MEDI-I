@@ -1,0 +1,40 @@
+# ==========================================
+# MEDI-I .gitignore
+# ==========================================
+
+# --- Secrets & Environment ---
+.env
+.env.local
+*.env
+
+# --- Datasets (DO NOT COMMIT) ---
+data/*.csv
+data/*.tsv
+data/*.xlsx
+data/*.parquet
+
+# --- Python Cache ---
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+*.log
+
+# --- Virtual Environments ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- OS & Editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# --- Build / Dist ---
+build/
+dist/
+*.egg-info/

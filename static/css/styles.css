@@ -1,0 +1,564 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text h1 {
+    font-size: 24px;
+    color: #0077b6;
+}
+
+.logo-text p {
+    font-size: 12px;
+    color: #333;
+    margin-top: 4px;
+}
+
+/* Navigation Menu */
+nav ul {
+    display: flex;
+    list-style: none;
+    flex-grow: 1;
+    justify-content: flex-end; /* Aligns nav links to the right */
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Plan Finder Button */
+.plan-finder-btn {
+    padding: 10px 20px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px; /* Adds space from the navigation menu */
+}
+
+.plan-finder-btn:hover {
+    background-color: #b71c1c;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #0077b6;
+    color: white;
+    height: 450px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.explore-btn {
+    padding: 15px 30px;
+    background-color: #d32f2f;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.explore-btn:hover {
+    background-color: #b71c1c;
+}
+
+/* Section Styles */
+.section {
+    padding: 60px 20px;
+}
+
+.about-section, .use-cases-section, .faqs-section, .contact-section {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #0077b6;
+}
+
+/* Use Case Cards */
+.use-case-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(45% - 20px);
+    max-width: 45%;
+}
+
+/* FAQs Section */
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Reusing global styles */
+
+/* Login Section */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #f0f8ff; /* Same as body background */
+}
+
+.login-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border: 3px solid #d32f2f; /* Red border for form */
+}
+
+.login-container h2 {
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+/* Account Options */
+.account-options input[type="radio"] {
+    margin: 10px;
+}
+
+.account-options label {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Login Inputs */
+.login-inputs {
+    margin-top: 20px;
+}
+
+.login-inputs input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Login Button */
+.login-btn {
+    padding: 10px 30px;
+    background-color: #d32f2f;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background-color: #b71c1c;
+}
+
+
+/* Reusing global styles */
+
+/* Dashboard Section */
+.dashboard-section {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #f0f8ff; /* Same as other sections */
+    color: #333;
+}
+
+.dashboard-section h2 {
+    font-size: 36px;
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+.dashboard-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* Option Cards */
+.option-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.option-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+}
+
+.option-card h3 {
+    font-size: 24px;
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+
+.option-card p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Option Buttons */
+.option-btn {
+    padding: 10px 20px;
+    background-color: #d32f2f;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.option-btn:hover {
+    background-color: #b71c1c;
+}
+
+
+/* Basic Details Section Styles */
+.details-section {
+    padding: 50px 20px;
+    background-color: #f0f8ff; /* Maintain the same background color */
+    text-align: center;
+}
+
+.details-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Center the form with a max width */
+    margin: auto; /* Center the container */
+}
+
+.details-container h2 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left; /* Align labels to the left */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #0077b6; /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #005f8b; /* Darker shade for hover effect */
+}
+
+/* Footer */
+footer {
+    background-color: #0077b6; /* Same as other pages */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Tagline */
+.tagline {
+    flex: 1;
+    text-align: center; /* Center the tagline */
+    font-size: 16px; /* Adjust font size */
+    color: #555;
+    font-style: italic; /* Italicize for better appearance */
+}
+
+/* Logo Section */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text h1 {
+    font-size: 24px;
+    color: #0077b6;
+}
+
+.logo-text p {
+    font-size: 12px;
+    color: #333;
+    margin-top: 4px;
+}
+
+/* Details Section Styles */
+.details-section {
+    padding: 40px 20px;
+}
+
+.details-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #d32f2f; /* Red border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.details-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input Group Styles */
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input Field Styles */
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border-color: #0077b6;
+}
+
+/* Align radio buttons (for Smoker section) */
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between Yes and No radio buttons */
+}
+
+/* Align checkboxes (for Disease section) */
+/* Disease Section */
+.disease-group {
+    display: flex;
+    flex-direction: column; /* Stack disease items vertically */
+    gap: 10px; /* Space between items */
+    margin-top: 10px;
+}
+
+.disease-item {
+    display: flex;
+    align-items: center; /* Align checkbox and label vertically */
+    gap: 10px; /* Space between checkbox and label */
+}
+
+.disease-item input[type="text"] {
+    margin-left: 15px; /* Add space between text input and checkbox */
+    padding: 5px;
+    width: 200px; /* Set width for 'other' text input */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.disease-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* Submit Button Styles */
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #005f8c;
+}
+
+/* Footer */
+footer {
+    background-color: #0077b6;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Profile
+/* Profile Logo Styles */
+.profile-logo {
+    width: 40px;  /* Small profile image size */
+    height: 40px; /* You can adjust the width and height to match your needs */
+    border-radius: 50%; /* Make the logo circular */
+    border: 2px solid #0077b6; /* Optional: Add a border around the logo */
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+    margin-left: 10px; /* Adds spacing between logo and other elements */
+}
+
+/* For better alignment with other nav items */
+ul {
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    margin-left: 20px; /* Adjusts spacing between list items */
+}

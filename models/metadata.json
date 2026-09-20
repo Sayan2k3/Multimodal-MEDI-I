@@ -1,0 +1,63 @@
+{
+  "model_name": "xgboost_medicare_recommender",
+  "model_version": "2.0.0",
+  "classifier_params": {
+    "objective": "multi:softprob",
+    "eval_metric": "mlogloss",
+    "n_estimators": 180,
+    "max_depth": 5,
+    "learning_rate": 0.04,
+    "subsample": 0.85,
+    "colsample_bytree": 0.85,
+    "min_child_weight": 2,
+    "gamma": 0.1,
+    "random_state": 42
+  },
+  "premium_params": {
+    "objective": "reg:squarederror",
+    "eval_metric": "rmse",
+    "n_estimators": 140,
+    "max_depth": 4,
+    "learning_rate": 0.04,
+    "subsample": 0.85,
+    "colsample_bytree": 0.85,
+    "random_state": 42
+  },
+  "coverage_params": {
+    "objective": "reg:squarederror",
+    "eval_metric": "rmse",
+    "n_estimators": 100,
+    "max_depth": 4,
+    "learning_rate": 0.05,
+    "subsample": 0.85,
+    "colsample_bytree": 0.85,
+    "random_state": 42
+  },
+  "classes": [
+    "HDFC ERGO Optima Restore Family Plan",
+    "ICICI Lombard Complete Health Insurance",
+    "Max Bupa Heartbeat Health Insurance",
+    "Religare Care Health Insurance",
+    "Star Health Diabetes Safe Insurance Policy"
+  ],
+  "test_accuracy": 0.9025,
+  "premium_r2_score": 0.9801,
+  "coverage_r2_score": 0.9748,
+  "feature_importances": {
+    "age": 0.063,
+    "bmi": 0.03,
+    "children": 0.078,
+    "smoker": 0.09,
+    "diabetes": 0.2725,
+    "pressure": 0.18,
+    "thyroid": 0.0353,
+    "asthma": 0.0255,
+    "other_disease": 0.0348,
+    "sex_female": 0.0082,
+    "sex_male": 0.008,
+    "sex_trans": 0.0058,
+    "preferences_immediateFunds": 0.095,
+    "preferences_longTermFunds": 0.051,
+    "preferences_shortTermFunds": 0.023
+  }
+}

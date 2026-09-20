@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDI-I | Login</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="/static/images/MEDI-I.png" alt="MEDI-I Logo">
+            <div class="logo-text">
+                <h1>MEDI-I</h1>
+                <p>AI FOR MEDICARE</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="use-cases.html">Use Cases</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <!-- <button class="plan-finder-btn">Plan Finder</button> -->
+        </nav>
+    </header>
+
+    <!-- Login Form Section -->
+    <section class="login-section">
+        <div class="login-container">
+            <h2>Login to MEDI-I</h2>
+            <form id="loginForm">
+                <!-- Account Options -->
+                <div class="account-options">
+                    <input type="radio" id="newAccount" name="accountType" value="newAccount" checked>
+                    <label for="newAccount">Create New Account</label>
+                    <br>
+                    <input type="radio" id="existingAccount" name="accountType" value="existingAccount">
+                    <label for="existingAccount">Existing Account</label>
+                </div>
+
+                <!-- Input Fields -->
+                <div class="login-inputs">
+                    <input type="text" id="emailOrPhone" placeholder="Email or Phone Number" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 MEDI-I. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript to handle form submission and redirect -->
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevents default form submission
+            // Perform validation or other login operations here
+
+            // Redirect to the dashboard page
+            window.location.href = "/dashboard";
+        });
+    </script>
+</body>
+</html>
+

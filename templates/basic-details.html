@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDI-I | Basic Details</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="/static/images/MEDI-I.png" alt="MEDI-I Logo">
+            <div class="logo-text">
+                <h1>MEDI-I</h1>
+                <p>AI FOR MEDICARE</p>
+            </div>
+        </div>
+        <p class="tagline">Let us Find the Best Plans for You!!</p> <!-- Centered Tagline -->
+        <nav>
+            <ul>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="profile">
+                    <a href="#"><img src="/static/images/Profile logo.png" alt="Profile Logo" class="profile-logo"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Basic Details Form Section -->
+    <section class="details-section">
+        <div class="details-container">
+            <h2>Enter Your Basic Details</h2>
+            <form id="basicDetailsForm">
+                <!-- Input Fields -->
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" placeholder="Enter your age" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="sex">Sex:</label>
+                    <select id="sex" required>
+                        <option value="">Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="trans">Trans</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="bmi">BMI:</label>
+                    <input type="text" id="bmi" placeholder="Enter your BMI" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="children">Number of Children:</label>
+                    <input type="number" id="children" placeholder="Enter number of children" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Smoker:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="smokerYes" name="smoker" value="yes" required>
+                        <label for="smokerYes">Yes</label>
+                        <input type="radio" id="smokerNo" name="smoker" value="no" required>
+                        <label for="smokerNo">No</label>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-group">
+                        <label>Disease (Select all that apply):</label>
+                        <div class="disease-group">
+                            <div class="disease-item">
+                                <input type="checkbox" id="diabetes" name="disease" value="diabetes">
+                                <label for="diabetes">Diabetes</label>
+                            </div>
+                            <div class="disease-item">
+                                <input type="checkbox" id="pressure" name="disease" value="pressure">
+                                <label for="pressure">High Blood Pressure</label>
+                            </div>
+                            <div class="disease-item">
+                                <input type="checkbox" id="thyroid" name="disease" value="thyroid">
+                                <label for="thyroid">Thyroid Issues</label>
+                            </div>
+                            <div class="disease-item">
+                                <input type="checkbox" id="asthma" name="disease" value="asthma">
+                                <label for="asthma">Asthma</label>
+                            </div>
+                            <div class="disease-item">
+                                <label for="otherDiseaseInput">Other (Please specify):</label>
+                                <input type="text" id="otherDiseaseInput" placeholder="Specify if other">
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+                <div class="input-group">
+                    <label for="preferences">Preferences:</label>
+                    <select id="preferences">
+                        <option value="immediateFunds">Looking for Immediate Funds</option>
+                        <option value="shortTermFunds">Looking for Short Term Funds</option>
+                        <option value="longTermFunds">Looking for Long Term Funds</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 MEDI-I. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Include JavaScript for handling form submission -->
+    <script src="/static/js/basic-details.js"></script>
+</body>
+</html>
